@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notebook To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="notebook">
+    <!-- spiral rings for realism -->
+    <div class="spirals" aria-hidden="true">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h1>📓 My To-Do List</h1>
+
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="What do you need to do?" />
+      <input type="date" id="dueDate" />
+      <select id="category">
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Other">Other</option>
+      </select>
+      <button id="addBtn">Add</button>
+    </div>
+
+    <div class="calendar-box">
+      <h3>📅 Upcoming Tasks</h3>
+  <input type="month" id="monthPicker" />
+  <!-- Centered month/year header for the mini calendar (wrapped for centering) -->
+  <div class="calendar-inner">
+    <div id="calendarHeader" class="calendar-header" aria-hidden="false"></div>
+    <!-- Mini calendar grid -->
+    <div id="miniCalendar" class="mini-calendar" aria-hidden="false"></div>
+  </div>
+      <button id="clearFilterBtn" style="display:none;margin-top:8px;">Clear filter</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
